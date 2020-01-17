@@ -1,11 +1,14 @@
 package com.bw.conteroller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.bw.constant.MessageConstant;
 import com.bw.entity.Result;
 import com.bw.entity.StatusCode;
 import com.bw.pojo.CheckItem;
@@ -121,4 +124,27 @@ public class CheckitemController {
 		}
 	}
 
+	//查询所有
+	/*@RequestMapping("/findAll")
+	public Result findAll(){
+	  List<CheckItem> checkItemList = checkitemService.findAll();
+	  if(checkItemList != null && checkItemList.size() > 0){
+	    Result result = new Result(true,
+	MessageConstant.QUERY_CHECKITEM_SUCCESS);
+	    result.setData(checkItemList);
+	    return result;
+	  }
+	  return new Result(false,StatusCode.OK,MessageConstant.QUERY_CHECKITEM_FAIL);
+	}*/
+	@RequestMapping("/findAll")
+	public Result findAll()
+	{
+		List<CheckItem> checkItemList = checkitemService.findAll();
+		if(checkItemList!=null&&checkItemList.size()>0){
+			return new Result(true, StatusCode.OK, MessageConstant.QUERY_CHECKITEM_SUCCESS, checkItemList);
+		}
+		return new Result(false, StatusCode.ERROR, MessageConstant.QUERY_CHECKITEM_FAIL);
+		}
+			
+	
 }

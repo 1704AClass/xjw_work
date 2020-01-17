@@ -53,4 +53,10 @@ public class CheckitemServiceImpl implements CheckitemService {
 		checkitemDao.update(checkItem);
 	}
 
+	@Override
+	public List<CheckItem> findAll() {
+		// TODO Auto-generated method stub
+		return checkitemDao.List(null);
+	}
+
 }

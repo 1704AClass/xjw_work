@@ -27,4 +27,5 @@ public interface CheckitemService {
 	 * t_checkitem表的修改
 	 */
 	public void update(CheckItem checkItem);
+	public List<CheckItem> findAll();
 }
