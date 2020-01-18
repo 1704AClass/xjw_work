@@ -1,5 +1,7 @@
 package com.bw.conteroller;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -45,6 +47,17 @@ public class CheckGroupController {
 	public PageResult findPage(@RequestBody QueryPageBean queryPageBean){
 		PageResult pageQuery = checkGroupService.pageQuery(queryPageBean.getCurrentPage(), queryPageBean.getPageSize(), queryPageBean.getQueryString());
 		return pageQuery;
+	}
+	@RequestMapping("findAll")
+	public Result findAll()
+	{
+		List<CheckGroup> list= checkGroupService.findAll();
+		if(list!=null&&list.size()>0)
+		{
+			return new Result(true, StatusCode.OK, MessageConstant.ADD_CHECKGROUP_SUCCESS, list);
+		}
+		
+		return new Result(false, StatusCode.OK, MessageConstant.ADD_CHECKGROUP_FAIL);
 	}
 
 }

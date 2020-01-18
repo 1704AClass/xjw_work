@@ -1,6 +1,7 @@
 package com.bw.service.impl;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +57,11 @@ public class CheckGroupServiceImpl implements CheckGroupService {
 		}
 		Page<CheckItem> page = checkGroupDao.selectByCondition(queryString);
 		return new PageResult(page.getTotal(),page.getResult());
+	}
+	@Override
+	public List<CheckGroup> findAll() {
+		// TODO Auto-generated method stub
+		return checkGroupDao.findAll();
 	}
 
 }

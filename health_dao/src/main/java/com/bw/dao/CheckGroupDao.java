@@ -1,5 +1,6 @@
 package com.bw.dao;
 
+import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.annotations.Insert;
@@ -19,5 +20,7 @@ public interface CheckGroupDao {
 
 	@Select("select * from t_checkgroup where code = #{queryString} or name = #{queryString} or helpCode = #{queryString}")
 	Page<CheckItem> selectByCondition(String queryString);
+	@Select("select * from t_checkgroup")
+	List<CheckGroup> findAll();
 
 }

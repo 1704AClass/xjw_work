@@ -6,13 +6,15 @@
   <packaging>pom</packaging>
   <modules>
   	<module>health_common</module>
-  	<module>health_pojo</module>
+  	
   	<module>health_dao</module>
   	<module>health_interfase</module>
   	
   	<module>health_service</module>
   	
   	<module>health_web</module>
+  	
+  	<module>health_pojo</module>
   </modules>
    <!-- 集中定义依赖版本号 -->
     <properties>
