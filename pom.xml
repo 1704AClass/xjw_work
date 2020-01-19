@@ -39,6 +39,8 @@
     <!-- 依赖管理标签  必须加 -->
     <dependencyManagement>
         <dependencies>
+        	
+		
             <!-- Spring -->
             <dependency>
                 <groupId>org.springframework</groupId>
