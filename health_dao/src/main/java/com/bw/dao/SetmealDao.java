@@ -1,5 +1,6 @@
 package com.bw.dao;
 
+import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.annotations.Insert;
@@ -16,5 +17,10 @@ public interface SetmealDao {
 	void setSetmealAndCheckGroup(Map<String, Integer> map);
 	@Select("select * from t_setmeal where code = #{value} or name = #{value} or helpCode = #{value}")
 	Page<Setmeal> selectByCondition(String queryString);
+	@Select("select * from t_setmeal where id=#{id}")
+	Setmeal findById(int id);
+	
+	@Select("select * from t_setmeal")
+	List<Setmeal> findAll();
 
 }

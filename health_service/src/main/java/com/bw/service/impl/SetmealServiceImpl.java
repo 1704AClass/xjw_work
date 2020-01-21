@@ -1,6 +1,7 @@
 package com.bw.service.impl;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 
 import redis.clients.jedis.JedisPool;
+
 @Service
 public class SetmealServiceImpl implements SetmealService {
 
@@ -51,6 +53,16 @@ public class SetmealServiceImpl implements SetmealService {
 		PageHelper.startPage(currentPage,pageSize);
 		Page<Setmeal> page = setmealDao.selectByCondition(queryString);
 		return new PageResult(page.getTotal(),page.getResult());
+	}
+	@Override
+	public Setmeal findById(int id) {
+		// TODO Auto-generated method stub
+		return setmealDao.findById(id);
+	}
+	@Override
+	public List<Setmeal> findAll() {
+		// TODO Auto-generated method stub
+		return setmealDao.findAll();
 	}
 
 }
