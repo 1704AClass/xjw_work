@@ -30,5 +30,5 @@
 	
 	<!-- 引用dubbo 服务 -->
 	<dubbo:application name="health_web" />
-	<dubbo:annotation package="com.bw.controller" />  	
+	<dubbo:annotation package="com.bw.*" />  	
 </beans>

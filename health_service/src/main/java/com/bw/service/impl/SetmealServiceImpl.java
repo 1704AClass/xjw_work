@@ -64,5 +64,10 @@ public class SetmealServiceImpl implements SetmealService {
 		// TODO Auto-generated method stub
 		return setmealDao.findAll();
 	}
+	@Override
+	public List<Map<String, Object>> findSetmealCount() {
+		// TODO Auto-generated method stub
+		return setmealDao.findSetmealCount();
+	}
 
 }

@@ -1,22 +1,9 @@
-;'0'
-3'0
-
-
-
-
-
-
-
-
-
-
-
-
-...2.2225.3.03package com.bw.conteroller;
+package com.bw.conteroller;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -44,6 +31,7 @@ public class CheckitemController {
 	 * @param name
 	 * @return
 	 */
+	@PreAuthorize("hasAuthority('CHECKITEM_DELETE')")//权限校验
 	@RequestMapping("list")
 	public Result list(int page, int size, String name)
 	{
@@ -62,6 +50,7 @@ public class CheckitemController {
 	 * @param checkItem
 	 * @return
 	 */
+	@PreAuthorize("hasAuthority('CHECKITEM_DELETE')")//权限校验
 	@RequestMapping("add")
 	public Result add(@RequestBody CheckItem checkItem)
 	{
@@ -84,6 +73,7 @@ public class CheckitemController {
 	 * @param id
 	 * @return
 	 */
+	@PreAuthorize("hasAuthority('CHECKITEM_DELETE')")//权限校验
 	@RequestMapping("del")
 	public Result del(Integer id)
 	{
@@ -105,6 +95,7 @@ public class CheckitemController {
 	 * @param checkItem
 	 * @return
 	 */
+	@PreAuthorize("hasAuthority('CHECKITEM_DELETE')")//权限校验
 	@RequestMapping("update")
 	public Result update(@RequestBody CheckItem checkItem)
 	{
@@ -124,6 +115,7 @@ public class CheckitemController {
 	 * @param id
 	 * @return
 	 */
+	@PreAuthorize("hasAuthority('CHECKITEM_DELETE')")//权限校验
 	@RequestMapping("findOne")
 	public Result findOne(Integer id)
 	{

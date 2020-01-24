@@ -35,25 +35,5 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/repository1/redis/clients/jedis/2.8.1/jedis-2.8.1.jar" sourcepath="D:/repository1/redis/clients/jedis/2.8.1/jedis-2.8.1-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="org.eclipse.jst.component.archivename" value="jedis-2.8.1.jar"/>
-			<attribute name="maven.groupId" value="redis.clients"/>
-			<attribute name="maven.artifactId" value="jedis"/>
-			<attribute name="maven.version" value="2.8.1"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="D:/repository1/com/aliyun/aliyun-java-sdk-core/3.2.5/aliyun-java-sdk-core-3.2.5.jar" sourcepath="D:/repository1/com/aliyun/aliyun-java-sdk-core/3.2.5/aliyun-java-sdk-core-3.2.5-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="org.eclipse.jst.component.archivename" value="aliyun-java-sdk-core-3.2.5.jar"/>
-			<attribute name="maven.groupId" value="com.aliyun"/>
-			<attribute name="maven.artifactId" value="aliyun-java-sdk-core"/>
-			<attribute name="maven.version" value="3.2.5"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
